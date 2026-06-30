@@ -2,7 +2,7 @@
 Striver's AtoZ sheet submissions
 
 [README.md](https://github.com/user-attachments/files/29486653/README.md)
-<h1 align="center">🧩 DSA Practice — Striver's A2Z Sheet</h1>
+<h1 align="center"> DSA Practice — Striver's A2Z Sheet</h1>
 
 <p align="center">
   Solving Striver's A2Z DSA Sheet systematically in <strong>Java</strong><br/>
