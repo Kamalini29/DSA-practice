@@ -1,0 +1,118 @@
+========================================
+THEORY BASICS (in JAVA & C++)
+Striver's A2Z DSA Sheet
+========================================
+
+1. INPUT / OUTPUT
+------------------
+Scanner sc = new Scanner(System.in);
+int n = sc.nextInt();
+String s = sc.nextLine();
+System.out.println("Output: " + n);
+
+- Scanner is easy but slow for large inputs.
+- For competitive programming / large inputs, prefer BufferedReader:
+  BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+  int n = Integer.parseInt(br.readLine());
+- StringBuilder for fast output when printing in loops (avoid System.out.println inside loops).
+
+
+2. JAVA BASICS
+--------------
+- Every program needs a class with public static void main(String[] args).
+- Data types: int (4 bytes), long (8 bytes, use for values > 2*10^9), double, char, boolean.
+- Java is pass-by-value always (for objects, the reference value is copied).
+- No pointers, but references behave similarly for objects/arrays.
+- Wrapper classes (Integer, Long) needed for collections since generics don't support primitives.
+
+
+3. IF-ELSE / ELSE-IF
+---------------------
+- Executes a block based on a boolean condition.
+- if -> else if -> else chain checks conditions top to bottom, stops at first true.
+- Use for range checks, classification logic.
+
+if (n > 0) {
+    System.out.println("Positive");
+} else if (n < 0) {
+    System.out.println("Negative");
+} else {
+    System.out.println("Zero");
+}
+
+
+4. SWITCH CASE
+--------------
+- Cleaner alternative to long if-else chains when checking one variable against multiple fixed values.
+- Don't forget "break;" or it falls through to the next case.
+- Java also supports switch expressions (newer syntax) with "->" and no fall-through.
+
+switch (day) {
+    case 1: System.out.println("Monday"); break;
+    case 2: System.out.println("Tuesday"); break;
+    default: System.out.println("Invalid");
+}
+
+
+5. ARRAYS & STRINGS
+--------------------
+Arrays:
+- Fixed size, contiguous memory, O(1) access by index.
+- int[] arr = new int[5];  or  int[] arr = {1, 2, 3};
+- Default values: 0 for int, null for objects, false for boolean.
+- arr.length gives size (no parentheses, it's a field not a method).
+
+Strings:
+- Immutable in Java - every modification creates a new String object.
+- String s = "hello"; s.length(), s.charAt(i), s.substring(a, b), s.equals(other).
+- Use StringBuilder for repeated concatenation/modification (mutable, O(1) append amortized).
+- Never compare strings with == (compares references) — always use .equals().
+
+
+6. FOR LOOPS
+------------
+- Used when the number of iterations is known/countable.
+for (int i = 0; i < n; i++) {
+    System.out.println(i);
+}
+- Enhanced for-each loop for iterating collections/arrays (read-only, no index access):
+for (int x : arr) {
+    System.out.println(x);
+}
+
+
+7. WHILE LOOPS
+--------------
+- Used when number of iterations is unknown, depends on a condition.
+while (n > 0) {
+    n = n / 10;
+}
+- do-while runs the body at least once before checking the condition:
+do {
+    // runs once even if condition is false
+} while (condition);
+
+
+8. FUNCTIONS - PASS BY REFERENCE VS VALUE
+-------------------------------------------
+- Java is strictly pass-by-value.
+- Primitives (int, char, boolean...): a copy of the value is passed. Changes inside the function do NOT affect the original.
+- Objects/Arrays: the reference (memory address) is copied by value. So you CAN'T reassign the original reference from inside the function, but you CAN mutate the object's internal state (e.g., modify array elements).
+
+void modifyValue(int x) {
+    x = 100; // original variable unaffected
+}
+
+void modifyArray(int[] arr) {
+    arr[0] = 100; // this DOES affect the original array
+}
+
+void reassignArray(int[] arr) {
+    arr = new int[]{9, 9, 9}; // original reference unaffected outside
+}
+
+Key takeaway: "reference is passed by value" - you get a copy of the pointer, not the ability to change what the original variable points to.
+
+========================================
+End of Step 01 theory notes
+========================================
