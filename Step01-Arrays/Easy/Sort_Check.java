@@ -1,5 +1,4 @@
 package Easy;
-import java.util.*;
 
 public class Sort_Check{
     public boolean check_array(int[] arr, int n){
