@@ -1,6 +1,61 @@
 package Basics.Patterns;
 
 public class Patterns {
+	public class pattern12 {
+		public void pattern12(int n) {
+			for (int i = 0; i < n; i++) {
+
+				// Spaces
+				for (int j = 0; j < n - i - 1; j++) {
+					System.out.print(" ");
+				}
+
+				// Increasing letters
+				for (char ch = 'A'; ch <= 'A' + i; ch++) {
+					System.out.print(ch);
+				}
+
+				// Decreasing letters
+				for (char ch = (char) ('A' + i - 1); ch >= 'A'; ch--) {
+					System.out.print(ch);
+				}
+
+				System.out.println();
+			}
+		}
+}
+	public class pattern11 {
+		public void pattern11(int n) {
+			for (int i = 1; i <= n; i++) {
+				char ch = (char) ('A' + i - 1);
+
+				for (int j = 1; j <= i; j++) {
+					System.out.print(ch);
+				}
+				System.out.println();
+			}
+		}
+}
+	public class pattern10 {
+    	public void pattern10(int n) {
+			for (int i = n; i >= 1; i--) {
+				for (char ch = 'A'; ch < 'A' + i; ch++) {
+					System.out.print(ch);
+				}
+				System.out.println();
+			}
+    }
+}
+	public class pattern9 {
+		public void pattern9(int n) {
+			for (int i = 1; i <= n; i++) {
+				for (char ch = 'A'; ch < 'A' + i; ch++) {
+					System.out.print(ch);
+				}
+				System.out.println();
+			}
+		}
+}
 	public class pattern8 {
 		public void pattern8(int n) {
 
@@ -161,6 +216,11 @@ public class Patterns {
 	    pattern6 p6 = obj.new pattern6();
 		pattern7 p7 = obj.new pattern7();
 		pattern8 p8 = obj.new pattern8();
+		pattern9 p9 = obj.new pattern9();
+		pattern10 p10 = obj.new pattern10();
+		pattern11 p11 = obj.new pattern11();
+		pattern12 p12 = obj.new pattern12();
+		
 	    
 	    p1.pattern1(5);
 	    System.out.println();
@@ -177,7 +237,19 @@ public class Patterns {
 	    p7.pattern7(5);
 		System.out.println();
 	    p8.pattern8(5);
-	    
+	    System.out.println();
+		p9.pattern9(5);
+
+		System.out.println();
+		p10.pattern10(5);
+
+		System.out.println();
+		p11.pattern11(5);
+
+		System.out.println();
+		p12.pattern12(5);
+
+		
 	}
 	
 	
