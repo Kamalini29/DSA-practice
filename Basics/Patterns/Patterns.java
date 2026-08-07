@@ -1,6 +1,38 @@
 package Basics.Patterns;
 
 public class Patterns {
+	public class pattern14 {
+      public void pattern14(int n) {
+        int size = 2 * n - 1;
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                int top = i;
+                int bottom = size - 1 - i;
+                int left = j;
+                int right = size - 1 - j;
+                int minDist = Math.min(Math.min(top, bottom), Math.min(left, right));
+                System.out.print((n - minDist) + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+	public class pattern13 {
+      public void pattern13(int n) {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (i == 0 || i == n - 1 || j == 0 || j == n - 1) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+
 	public class pattern12 {
 		public void pattern12(int n) {
 			for (int i = 0; i < n; i++) {
@@ -220,7 +252,8 @@ public class Patterns {
 		pattern10 p10 = obj.new pattern10();
 		pattern11 p11 = obj.new pattern11();
 		pattern12 p12 = obj.new pattern12();
-		
+		pattern13 p13 = obj.new pattern13();
+		pattern14 p14 = obj.new pattern14();
 	    
 	    p1.pattern1(5);
 	    System.out.println();
@@ -249,6 +282,10 @@ public class Patterns {
 		System.out.println();
 		p12.pattern12(5);
 
+		System.out.println();
+		p13.pattern13(5);
+		System.out.println();
+		p14.pattern14(5);
 		
 	}
 	
