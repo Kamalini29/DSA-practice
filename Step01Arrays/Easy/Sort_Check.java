@@ -1,4 +1,4 @@
-package Easy;
+package Step01Arrays.Easy;
 
 public class Sort_Check{
     public boolean check_array(int[] arr, int n){

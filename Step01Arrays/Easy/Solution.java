@@ -1,4 +1,4 @@
-package Easy;
+package Step01Arrays.Easy ;
 
 public class Solution{
     public int GetMaxnum(int[] arr, int n){

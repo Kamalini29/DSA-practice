@@ -1,4 +1,4 @@
-package Easy;
+package Step01Arrays.Easy;
 import java.util.Arrays;
 
 public class Second_Large_Small_Brute{
