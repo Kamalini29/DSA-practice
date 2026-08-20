@@ -10,7 +10,7 @@ public class Solution{
         }
         return max;
     }
-}
+
 
 class Main {
     public static void main(String[] args) {
@@ -21,5 +21,6 @@ class Main {
 
         System.out.println(s.GetMaxnum(a, a.length));
         System.out.println(s.GetMaxnum(b, b.length));
+    }
     }
 }
