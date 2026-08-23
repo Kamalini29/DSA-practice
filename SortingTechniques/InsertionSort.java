@@ -21,7 +21,7 @@ public class InsertionSort{
         System.out.println("After Sorting:");
         
         for(int i=0;i<n; i++ ){
-            System.out.println(nums[i]);
+            System.out.print(" " + nums[i]);
         }
     }
     public static void main(String[] args){
