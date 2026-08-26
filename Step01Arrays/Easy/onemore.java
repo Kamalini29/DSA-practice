@@ -3,7 +3,7 @@ package Step01Arrays.Easy;
 public import java.util.*;
 
 // Class to solve the problem of finding the second smallest and second largest elements
-class Solution {
+class onemore{
 
     // Method to find the second smallest and second largest elements in the array
     public static void getElements(int[] arr, int n) {
@@ -38,9 +38,6 @@ class Solution {
         System.out.println("Second smallest is " + second_small);
         System.out.println("Second largest is " + second_large);
     }
-}
-
-public class Main {
 
     public static void main(String[] args) {
 
@@ -49,8 +46,7 @@ public class Main {
         int[] arr = {1, 2, 4, 6, 7, 5};  // Array of elements
 
         // Call the function to find and print the second smallest and second largest elements
-        Solution.getElements(arr, n);
+        onemore.getElements(arr, n);
     }
-} {
     
 }
