@@ -1,5 +1,6 @@
 package TweWeekChallenge.Arrays;
 
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class TwoSum {
@@ -34,5 +35,21 @@ public class TwoSum {
         }
 
         return new int[] {};
+    }
+
+    public static void main(String[] args) {
+
+        TwoSum obj = new TwoSum();
+
+        int[] arr = {2, 7, 11, 15};
+        int target = 9;
+
+        // Brute Force
+        boolean bruteResult = obj.Sol_brute_2sum(arr, target);
+        System.out.println("Brute Force: " + bruteResult);
+
+        // Optimized
+        int[] optimizedResult = obj.Sol_optimise_2sum(arr, target);
+        System.out.println("Optimized: " + Arrays.toString(optimizedResult));
     }
 }
