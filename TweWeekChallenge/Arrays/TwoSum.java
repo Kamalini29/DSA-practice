@@ -6,14 +6,15 @@ public class TwoSum {
     public boolean Sol_brute_2sum (int[] arr, int target){
         int n = arr.length;
 
-        for(int i =0; i<n; i++){
-            for(int j = 0; j<n;j++){
-                if(i == j) continue;
-                if(arr[i] + arr[j] == target){
-                    return true;
-                }
+         for (int i = 0; i < n - 1; i++) {
+
+        for (int j = i + 1; j < n; j++) {
+
+            if (arr[i] + arr[j] == target) {
+                return true;
             }
         }
+    }
 
         return false;
     }
