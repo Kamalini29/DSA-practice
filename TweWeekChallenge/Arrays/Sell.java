@@ -18,12 +18,32 @@ public class Sell {
         return ans;
     }
 
+    public int OptimizedSell(int[] arr) {
+        int min = arr[0];
+        int tmax = 0;
+        for(int i=0;i< arr.length; i++){
+            int max = arr[i] - min;
+            if(min > arr[i]){
+                min = arr[i];
+            }
+            if(max>tmax){
+                tmax = max;
+            }
+            
+        }
+        return tmax;
+    }
+
+  
+
     public static void main(String[] args){
         Sell s = new Sell();
         int[] arr = {1,5,2,10,3,12};
         int[] ans = s.bruteSell(arr);
+        int ans2 = s.OptimizedSell(arr);
 
         System.out.println("Buy index: " + ans[0]);
         System.out.println("Sell index: " + ans[1]);
+        System.out.println("Oprimized profit : " + ans2 );
     }
 }
