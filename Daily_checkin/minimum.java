@@ -1,4 +1,3 @@
-package Daily_checkin;
 
 import java.util.*;
 
