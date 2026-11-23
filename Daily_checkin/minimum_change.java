@@ -1,4 +1,3 @@
-package Daily_checkin;
 
 class minimum_changes {
     public int minChanges(String s) {
