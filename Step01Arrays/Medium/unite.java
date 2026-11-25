@@ -56,7 +56,7 @@ public class unite {
         int[] nums1 = {1, 1, 2, 3, 4};
         int[] nums2 = {2, 3, 5, 6};
 
-        Solution solution = new Solution();
+        unite solution = new unite();
         List<Integer> answer = solution.findUnion(nums1, nums2);
 
         for (int value : answer) {

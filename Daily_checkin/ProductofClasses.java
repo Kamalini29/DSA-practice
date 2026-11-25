@@ -1,12 +1,14 @@
+import java.util.ArrayList;
 
 class ProductofClasses {
 
     ArrayList<Integer> prefix;
 
-    public ProductOfNumbers() {
+    public void ProductOfNumbers() {
         prefix = new ArrayList<>();
         prefix.add(1);
     }
+
 
     public void add(int num) {
 
